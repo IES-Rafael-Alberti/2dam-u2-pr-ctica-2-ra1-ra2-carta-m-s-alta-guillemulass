@@ -2,16 +2,24 @@ package com.gmulbat1301.cartamasalta.screen
 
 class Baraja(listaCartas : ArrayList<Carta>){
 
-    fun crearBaraja(){
+    companion object{
 
-    }
+        var baraja = listOf<Carta>()
 
-    fun barajar(){
+        fun crearBaraja(){
+            for (i in Palos.values()){
+                for (j in Naipes.values())
 
-    }
+            }
+        }
 
-    fun dameCarta(){
+        fun barajar(){
 
+        }
+
+        fun dameCarta(){
+
+        }
     }
 
 }

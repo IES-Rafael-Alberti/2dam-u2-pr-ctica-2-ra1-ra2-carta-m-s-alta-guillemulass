@@ -64,7 +64,7 @@ fun MainScreen(){
 
 @Composable
 fun Reverso() {
-    val painter: Painter = painterResource(id = R.drawable.creverso)
+    val painter: Painter = painterResource(id = R.drawable.reverse)
 
     Image(
         painter = painter,
