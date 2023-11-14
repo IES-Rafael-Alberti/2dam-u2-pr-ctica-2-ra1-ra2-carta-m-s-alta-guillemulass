@@ -1,5 +1,5 @@
 package com.gmulbat1301.cartamasalta.screen
 
 enum class Palos(index: Int) {
-    Picas(1),Corazones(2),Treboles(3),Diamantes(4)
+   Corazones(1),Diamantes(2),Treboles(3),Picas(4)
 }

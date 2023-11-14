@@ -26,6 +26,8 @@ import com.gmulbat1301.cartamasalta.R
 @Preview
 @Composable
 fun MainScreen(){
+    var reverso = true
+    var idDrawable = 0
     Column (
         modifier = Modifier
             .fillMaxSize()
@@ -36,10 +38,21 @@ fun MainScreen(){
         Box (
             modifier = Modifier
         ){
-            Reverso()
+            if (reverso){
+                Reverso()
+            } else{
+
+                MostrarCarta(idDrawable = idDrawable)
+            }
         }
         Row {
             Button(onClick = {
+                if (reverso){
+                    Baraja.crearBaraja()
+                    Baraja.barajar()
+                }
+                Baraja.dameCarta()
+                reverso = false
 
             },
                 modifier = Modifier
@@ -50,6 +63,7 @@ fun MainScreen(){
             }
 
             Button(onClick = {
+                reverso = true
 
             },
                 modifier = Modifier
@@ -65,6 +79,20 @@ fun MainScreen(){
 @Composable
 fun Reverso() {
     val painter: Painter = painterResource(id = R.drawable.reverse)
+
+    Image(
+        painter = painter,
+        contentDescription = "Carta",
+        modifier = Modifier
+            .width(300.dp)
+            .height(445.dp)
+    )
+}
+
+@Composable
+fun MostrarCarta(idDrawable : Int) {
+
+    val painter: Painter = painterResource(id = idDrawable)
 
     Image(
         painter = painter,
