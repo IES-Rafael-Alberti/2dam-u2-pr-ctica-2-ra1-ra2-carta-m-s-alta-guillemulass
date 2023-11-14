@@ -41,7 +41,12 @@ fun MainScreen(){
             if (reverso){
                 Reverso()
             } else{
-
+                /**
+                 *
+                 *
+                 *
+                 *
+                 */
                 MostrarCarta(idDrawable = idDrawable)
             }
         }
